@@ -7,7 +7,7 @@
 text := import("text")
 for key, value in ga_env {
     // Only export values with export in the name
-    if contains(value,"export") {
+    if text.contains(value,"export") {
         ga_labels[key] = value
     }
 }

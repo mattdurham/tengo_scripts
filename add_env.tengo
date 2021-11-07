@@ -5,5 +5,5 @@
 // ga_env is a map of environment variable
 
 ga_labels["os_hostname"] = ga_hostname
-ga_labels["special_env"] = ga_env["TEST_ENV"]
+ga_labels["special_env"] = ga_env["export_TEST_ENV"]
 ga_action = "keep"

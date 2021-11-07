@@ -4,8 +4,11 @@
 // ga_action is a string that support "keep" and "drop"
 // ga_hostname is a string that is the hostname
 // ga_env is a map of environment variable
-
+text := import("text")
 for key, value in ga_env {
-    ga_labels[key] = value
+    // Only export values with export in the name
+    if contains(value,"export") {
+        ga_labels[key] = value
+    }
 }
 ga_action = "keep"

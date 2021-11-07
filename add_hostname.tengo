@@ -1,0 +1,11 @@
+
+// builtins
+// ga_labels is a map of the labels to send
+// ga_action is a string that support "keep" and "drop"
+// ga_hostname is a string that is the hostname
+// ga_env is a map of environment variable
+
+if !ga_labels["agent_hostname"] {
+  ga_labels["agent_hostname"] = ga_hostname
+}
+ga_action = "keep"
